@@ -3,7 +3,7 @@
 %
 % Created by Mariana Gomez-Schiavon
 
-function dYdt = MODEL_FN_ODE_YA(t,y)
+function dYdt = FN_ODE_YA(t,y)
     load Par_ODE.mat
     
     if(t<120)
