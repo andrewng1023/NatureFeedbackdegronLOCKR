@@ -60,7 +60,7 @@ for o = 1:length(myTo)
     end
     for i = 1:length(pp)
         p.(myP) = p.(myP)*pp(i);
-        SS(o,i,:) = MODEL_FN_SS_Hill(p.P,p,FmZ,FmK,FmY,1e-5);
+        SS(o,i,:) = FN_SS_Hill(p.P,p,FmZ,FmK,FmY,1e-5);
         p.(myP) = p.(myP)/pp(i);
     end
     p.(myT) = p.(myT)/myTp(o);
