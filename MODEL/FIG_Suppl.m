@@ -58,7 +58,7 @@ for OL = 0:1
     end
     for i = 1:length(pp)
         p.(myP) = p.(myP)*pp(i);
-        SS(OL+1,i,:) = MODEL_FN_SS_Hill(p.P,p,FmZ,FmK,FmY,1e-5);
+        SS(OL+1,i,:) = FN_SS_Hill(p.P,p,FmZ,FmK,FmY,1e-5);
         p.(myP) = p.(myP)/pp(i);
     end
 end
