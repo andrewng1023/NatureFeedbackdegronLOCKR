@@ -48,7 +48,7 @@ for OL = 0:1
         
     % Steady states
     for i = 1:length(P)
-        SS(OL+1,i,:) = MODEL_FN_SS_Hill(P(i),p,FmZ,FmK,FmY,1e-4);
+        SS(OL+1,i,:) = FN_SS_Hill(P(i),p,FmZ,FmK,FmY,1e-4);
     end
     clear OL i
 end
