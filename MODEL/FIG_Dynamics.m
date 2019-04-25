@@ -43,14 +43,14 @@ if(OL)
 end
 
 %% Initial conditions (steady state):
-yO =  MODEL_FN_SS_Hill(ii(1),p,FmZ,FmK,FmY,1e-4);
+yO =  FN_SS_Hill(ii(1),p,FmZ,FmK,FmY,1e-4);
 
 %% ODE
 SS = zeros(length(ii),6,length(T));
 for i = 1:length(ii)
     iP = [ii(1),ii(i)];
     save('Par_ODE.mat','p','iP','OL')
-    [t,y] = ode45(@MODEL_FN_ODE_YA,T,yO);
+    [t,y] = ode45(@FN_ODE_YA,T,yO);
     SS(i,:,:) = y';
 end
 clear i t y iP
