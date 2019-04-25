@@ -3,7 +3,7 @@
 %
 % Created by Mariana Gomez-Schiavon
 
-function ss = MODEL_FN_SS_Hill(Pi,p,FmZ,FmK,FmY,eps)
+function ss = FN_SS_Hill(Pi,p,FmZ,FmK,FmY,eps)
     iK = [0 (FmK(1000,Pi,p.mK,p.aK,p.nK,p.kK)/p.gK)];
     dG = 1; dZ = 1; dK = 1; dC = 1;
     while(max(abs([dG dZ dK dC]))>1e-4)
